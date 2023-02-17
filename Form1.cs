@@ -27,9 +27,6 @@ namespace Calculator
         public bool divideByZero = false;
         public bool negSqrt = false;
 
-        public double min;
-        public double max;
-
         /// <summary>
         /// initializing
         /// </summary>
@@ -50,6 +47,14 @@ namespace Calculator
             {
                 OutputWindow.Text = "1";
             }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "1";
+                }
+            }
             else
             {
                 OutputWindow.Text = OutputWindow.Text + "1";
@@ -62,6 +67,14 @@ namespace Calculator
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "2";
+            }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "2";
+                }
             }
             else
             {
@@ -76,6 +89,14 @@ namespace Calculator
             {
                 OutputWindow.Text = "3";
             }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "3";
+                }
+            }
             else
             {
                 OutputWindow.Text = OutputWindow.Text + "3";
@@ -88,6 +109,14 @@ namespace Calculator
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "4";
+            }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "4";
+                }
             }
             else
             {
@@ -102,6 +131,14 @@ namespace Calculator
             {
                 OutputWindow.Text = "5";
             }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "5";
+                }
+            }
             else
             {
                 OutputWindow.Text = OutputWindow.Text + "5";
@@ -114,6 +151,14 @@ namespace Calculator
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "6";
+            }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "6";
+                }
             }
             else
             {
@@ -128,6 +173,14 @@ namespace Calculator
             {
                 OutputWindow.Text = "7";
             }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "7";
+                }
+            }
             else
             {
                 OutputWindow.Text = OutputWindow.Text + "7";
@@ -140,6 +193,14 @@ namespace Calculator
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "8";
+            }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "8";
+                }
             }
             else
             {
@@ -154,6 +215,14 @@ namespace Calculator
             {
                 OutputWindow.Text = "9";
             }
+            else if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "9";
+                }
+            }
             else
             {
                 OutputWindow.Text = OutputWindow.Text + "9";
@@ -163,7 +232,18 @@ namespace Calculator
         // num0
         private void num0_Click(object sender, EventArgs e)
         {
-            OutputWindow.Text = OutputWindow.Text + "0";
+            if (separ == true)
+            {
+                string[] parts = OutputWindow.Text.Split(',');
+                if (parts[1].Length < 2)
+                {
+                    OutputWindow.Text = OutputWindow.Text + "0";
+                }
+            }
+            else
+            {
+                OutputWindow.Text = OutputWindow.Text + "0";
+            }
         }
 
         /// <summary>
@@ -302,7 +382,7 @@ namespace Calculator
         // main textbox
         private void OutputWindow_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         // additional textbox
@@ -318,15 +398,13 @@ namespace Calculator
         // sqrt(x)
         private void sqrtx_Click(object sender, EventArgs e)
         {
-            
-
             if (OutputWindow.Text != "")
             {
                 double first = double.Parse(OutputWindow.Text);
 
                 if(first >= 0)
                 {
-                    result = Math.Sqrt(double.Parse(OutputWindow.Text));
+                    result = Math.Round(Math.Sqrt(double.Parse(OutputWindow.Text)), 4);
                     OutputWindow.Text = result.ToString();
                     if (result % 1 != 0)
                     {
@@ -347,7 +425,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = Math.Sin(double.Parse(OutputWindow.Text));
+                result = Math.Round(Math.Sin(double.Parse(OutputWindow.Text)), 4);
                 OutputWindow.Text = result.ToString();
                 if (result % 1 != 0)
                 {
@@ -362,7 +440,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = 1 / double.Parse(OutputWindow.Text);
+                result = Math.Round(1 / double.Parse(OutputWindow.Text));
                 OutputWindow.Text = result.ToString();
                 if(result % 1 != 0)
                 {
@@ -379,13 +457,13 @@ namespace Calculator
         // minimal number
         private void mininput_TextChanged(object sender, EventArgs e)
         {
-            min = double.Parse(mininput.Text);
+
         }
 
         // maximal number
         private void maxinput_TextChanged(object sender, EventArgs e)
         {
-            max = double.Parse(maxinput.Text);
+
         }
 
         /// <summary>
