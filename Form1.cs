@@ -318,15 +318,13 @@ namespace Calculator
         // sqrt(x)
         private void sqrtx_Click(object sender, EventArgs e)
         {
-            
-
             if (OutputWindow.Text != "")
             {
                 double first = double.Parse(OutputWindow.Text);
 
                 if(first >= 0)
                 {
-                    result = Math.Sqrt(double.Parse(OutputWindow.Text));
+                    result = Math.Round(Math.Sqrt(double.Parse(OutputWindow.Text)), 4);
                     OutputWindow.Text = result.ToString();
                     if (result % 1 != 0)
                     {
@@ -347,7 +345,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = Math.Sin(double.Parse(OutputWindow.Text));
+                result = Math.Round(Math.Sin(double.Parse(OutputWindow.Text)), 4);
                 OutputWindow.Text = result.ToString();
                 if (result % 1 != 0)
                 {
@@ -362,7 +360,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = 1 / double.Parse(OutputWindow.Text);
+                result = Math.Round(1 / double.Parse(OutputWindow.Text));
                 OutputWindow.Text = result.ToString();
                 if(result % 1 != 0)
                 {
