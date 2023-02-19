@@ -440,7 +440,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = Math.Round(1 / double.Parse(OutputWindow.Text));
+                result = Math.Round(1 / double.Parse(OutputWindow.Text), 4);
                 OutputWindow.Text = result.ToString();
                 if(result % 1 != 0)
                 {

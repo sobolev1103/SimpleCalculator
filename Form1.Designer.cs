@@ -430,7 +430,9 @@
             this.Controls.Add(this.sinx);
             this.Controls.Add(this.sqrtx);
             this.Controls.Add(this.OutputWindow);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Simple Calculator";
             this.ResumeLayout(false);
