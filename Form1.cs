@@ -27,6 +27,9 @@ namespace Calculator
         public bool divideByZero = false;
         public bool negSqrt = false;
 
+        public double min, max;
+        public double value;
+
         /// <summary>
         /// initializing
         /// </summary>
@@ -43,206 +46,276 @@ namespace Calculator
         // num1
         private void num1_Click(object sender, EventArgs e)
         {
+            value = 1;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "1";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "1";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "1";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "1";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "1";
+                }
             }
         }
 
         // num2
         private void num2_Click(object sender, EventArgs e)
         {
+            value = 2;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "2";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "2";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "2";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "2";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "2";
+                }
             }
         }
 
         // num3
         private void num3_Click(object sender, EventArgs e)
         {
+            value = 3;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "3";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "3";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "3";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "3";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "3";
+                }
             }
         }
 
         // num4
         private void num4_Click(object sender, EventArgs e)
         {
+            value = 4;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "4";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "4";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "4";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "4";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "4";
+                }
             }
         }
 
         // num5
         private void num5_Click(object sender, EventArgs e)
         {
+            value = 5;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "5";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "5";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "5";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "5";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "5";
+                }
             }
         }
 
         // num6
         private void num6_Click(object sender, EventArgs e)
         {
+            value = 6;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "6";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "6";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "6";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "6";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "6";
+                }
             }
         }
 
         // num7
         private void num7_Click(object sender, EventArgs e)
         {
+            value = 7;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "7";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "7";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "7";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "7";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "7";
+                }
             }
         }
 
         // num8
         private void num8_Click(object sender, EventArgs e)
         {
+            value = 8;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "8";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "8";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "8";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "8";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "8";
+                }
             }
         }
 
         // num9
         private void num9_Click(object sender, EventArgs e)
         {
+            value = 9;
             if (OutputWindow.Text == "")
             {
                 OutputWindow.Text = "9";
             }
             else if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "9";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "9";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "9";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "9";
+                }
             }
         }
 
         // num0
         private void num0_Click(object sender, EventArgs e)
         {
+            value = 0;
             if (separ == true)
             {
-                string[] parts = OutputWindow.Text.Split(',');
-                if (parts[1].Length < 2)
+                if (check_Range())
                 {
-                    OutputWindow.Text = OutputWindow.Text + "0";
+                    string[] parts = OutputWindow.Text.Split(',');
+                    if (parts[1].Length < 2)
+                    {
+                        OutputWindow.Text = OutputWindow.Text + "0";
+                    }
                 }
             }
             else
             {
-                OutputWindow.Text = OutputWindow.Text + "0";
+                if (check_Range())
+                {
+                    OutputWindow.Text = OutputWindow.Text + "0";
+                }
             }
         }
 
@@ -503,6 +576,24 @@ namespace Calculator
                 {
                     OutputWindow.Text = "";
                 }
+            }
+        }
+
+        private bool check_Range()
+        {
+            min = double.Parse(mininput.Text);
+            max = double.Parse(maxinput.Text);
+            
+            string s = value.ToString();
+
+            if (double.Parse(OutputWindow.Text + s) >= min &&
+                double.Parse(OutputWindow.Text + s) <= max)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
