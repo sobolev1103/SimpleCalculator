@@ -344,21 +344,21 @@ namespace Calculator
                 switch (operation)
                 {
                     case 1:
-                        result = Math.Round(number1 + double.Parse(OutputWindow.Text), 4);
+                        result = Math.Round(number1 + double.Parse(OutputWindow.Text), 2);
                         OutputWindow.Text = result.ToString();
                         break;
                     case 2:
-                        result = Math.Round(number1 - double.Parse(OutputWindow.Text), 4);
+                        result = Math.Round(number1 - double.Parse(OutputWindow.Text), 2);
                         OutputWindow.Text = result.ToString();
                         break;
                     case 3:
-                        result = Math.Round(number1 * double.Parse(OutputWindow.Text), 4);
+                        result = Math.Round(number1 * double.Parse(OutputWindow.Text), 2);
                         OutputWindow.Text = result.ToString();
                         break;
                     case 4:
                         if (double.Parse(OutputWindow.Text) != 0)
                         {
-                            result = Math.Round(number1 / double.Parse(OutputWindow.Text), 4);
+                            result = Math.Round(number1 / double.Parse(OutputWindow.Text), 2);
                             OutputWindow.Text = result.ToString();
                         }
                         else
@@ -404,7 +404,7 @@ namespace Calculator
 
                 if(first >= 0)
                 {
-                    result = Math.Round(Math.Sqrt(double.Parse(OutputWindow.Text)), 4);
+                    result = Math.Round(Math.Sqrt(double.Parse(OutputWindow.Text)), 2);
                     OutputWindow.Text = result.ToString();
                     if (result % 1 != 0)
                     {
@@ -425,7 +425,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = Math.Round(Math.Sin(double.Parse(OutputWindow.Text)), 4);
+                result = Math.Round(Math.Sin(double.Parse(OutputWindow.Text)), 2);
                 OutputWindow.Text = result.ToString();
                 if (result % 1 != 0)
                 {
@@ -440,7 +440,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = Math.Round(1 / double.Parse(OutputWindow.Text), 4);
+                result = Math.Round(1 / double.Parse(OutputWindow.Text), 2);
                 OutputWindow.Text = result.ToString();
                 if(result % 1 != 0)
                 {
