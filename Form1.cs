@@ -498,7 +498,7 @@ namespace Calculator
         {
             if (OutputWindow.Text != "")
             {
-                result = Math.Round(Math.Sin(double.Parse(OutputWindow.Text)), 2);
+                result = Math.Round(Math.Sin(double.Parse(OutputWindow.Text) * Math.PI / 180), 2);
                 OutputWindow.Text = result.ToString();
                 if (result % 1 != 0)
                 {
@@ -579,6 +579,9 @@ namespace Calculator
             }
         }
 
+        /// <summary>
+        /// Method that checks range of input
+        /// </summary>
         private bool check_Range()
         {
             min = double.Parse(mininput.Text);
